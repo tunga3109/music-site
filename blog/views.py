@@ -7,9 +7,9 @@ from .forms import ContactForm
 
 
 @require_GET
-def blog_list(request: HttpRequest):
-    posts_list = Post.objects.all()
-    return render(request, "blog/index.html", {'posts': posts_list})
+def main(request: HttpRequest):
+    posts = Post.objects.all()
+    return render(request, "blog/index.html", {'posts': posts})
 
 
 def post_detail(request: HttpRequest, post_slug: str):
@@ -26,8 +26,9 @@ def contact(request: HttpRequest):
     return render(request, 'blog/contact.html', {'contact_form': form})
 
 
-def about(request: HttpRequest):
-    return render(request, 'blog/about.html')
+def posts(request: HttpRequest):
+    posts = Post.objects.all()
+    return render(request, 'blog/posts.html', {'posts': posts}) #!!!!!!!! переделать
 
 
 def error404(request, exception):
