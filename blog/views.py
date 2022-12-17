@@ -28,8 +28,12 @@ def contact(request: HttpRequest):
 
 def posts(request: HttpRequest):
     posts = Post.objects.all()
-    return render(request, 'blog/posts.html', {'posts': posts}) #!!!!!!!! переделать
+    return render(request, 'blog/posts.html', {'posts': posts})  # !!!!!!!! переделать
 
 
 def error404(request, exception):
     return render(request, 'blog/error_404.html')
+
+
+def about(request: HttpRequest):
+    return render(request, 'blog/about.html')

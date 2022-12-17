@@ -9,7 +9,7 @@ class ContactForm(ModelForm):
             attrs={
                 'class': 'form-control',
                 'id': 'name',
-                'placeholder': 'enter your name.....'
+                'placeholder': 'Name'
             }
         ),
         max_length=64
@@ -29,7 +29,7 @@ class ContactForm(ModelForm):
             attrs={
                 'class': 'form-control',
                 'id': 'email',
-                'style': 'height: 12rem',
+                'style': 'height: 10rem',
                 'placeholder': 'Message'
 
             }

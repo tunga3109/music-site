@@ -22,26 +22,26 @@
                   <a class="nav-link" href="{% url 'blog_main' %}">Главная</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="about.html">О нас </a>
+                  <a class="nav-link" href="{% url 'blog_about' %}">О нас </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="{% url 'blog_posts' %}"> Посты </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Контакты </a>
+                  <a class="nav-link" href="{% url 'blog_contact' %}">Контакты </a>
                 </li>
               </ul>
             </div>
             <div class="quote_btn-container  d-flex justify-content-center">
               <a href="">
                 <img src="{% static 'images/call.png' %}" alt="">
-                CALL : +01 1234567890
+                +375336377999
               </a>
               <a href="">
                 <span>
                   @
                 </span>
-                demo@gmail.com
+                tunga3109@gmail.com
               </a>
             </div>
           </div>
