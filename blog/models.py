@@ -70,7 +70,7 @@ class Post(models.Model):
 
     @property
     def date(self) -> str:
-        return self.date_created.strftime('%d.%m.%y')
+        return self.date_created.strftime('%d/%m/%y')
 
     @property
     def full_name(self):

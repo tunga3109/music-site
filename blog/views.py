@@ -14,7 +14,7 @@ def main(request: HttpRequest):
 
 def post_detail(request: HttpRequest, post_slug: str):
     post = get_object_or_404(Post, slug=post_slug)
-    return render(request, 'blog/post.html', {'post': post})
+    return render(request, 'blog/posts.html', {'post': post})
 
 
 def contact(request: HttpRequest):
@@ -28,7 +28,7 @@ def contact(request: HttpRequest):
 
 def posts(request: HttpRequest):
     posts = Post.objects.all()
-    return render(request, 'blog/posts.html', {'posts': posts})  # !!!!!!!! переделать
+    return render(request, 'blog/posts_list.html', {'posts': posts})  # !!!!!!!! переделать
 
 
 def error404(request, exception):
@@ -37,3 +37,5 @@ def error404(request, exception):
 
 def about(request: HttpRequest):
     return render(request, 'blog/about.html')
+
+
