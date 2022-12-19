@@ -22,7 +22,7 @@ HOME
 <span class="sr-only">Next</span>
 </a>
 <h1>
-MUZLOVE <br>
+{{ heading }} <br>
 Musical mood <br>
 Musical good
 </h1>
@@ -64,12 +64,9 @@ CONTACT US
       <div class="row">
         <div class="col-md-6">
           <div class="detail-box">
-            <h6>
-              About
-            </h6>
             <div class="custom_heading-container">
               <h2>
-                web elements
+                ABOUT US
               </h2>
               <hr>
             </div>
@@ -78,7 +75,7 @@ CONTACT US
               looking at its layout. The point of using Lorem
             </p>
             <div>
-              <a href="">
+              <a href="{% url 'blog_about' %}">
                 Read More
               </a>
             </div>
@@ -157,27 +154,27 @@ CONTACT US
       <div class="layout_padding-top layout_padding2-bottom">
         <div class="row">
           <div class="col-md-7">
-            <form action="">
+            <form method="post">
+            {% csrf_token %}
+            <label>
+              <input name="form_type" value="contact_form" hidden>
+            </label>
               <div class="contact_form-container">
                 <div>
                   <div>
-                    <input type="text" placeholder="Name">
+                    {{ form.name }}
                   </div>
                   <div>
-                    <input type="email" placeholder="Email">
+                    {{ form.email }}
                   </div>
                   <div class="">
-                    <input type="text" placeholder="Message" class="message_input">
+                    {{ form.message }}
                   </div>
                   <div class="mt-5">
-                    <button type="submit">
-                      send
-                    </button>
+                    <button type="submit">send</button>
                   </div>
                 </div>
-
               </div>
-
             </form>
           </div>
           <div class="col-md-5">
@@ -202,7 +199,7 @@ CONTACT US
             </div>
             <div class="detail-box">
               <p>
-                +02 1234567890
+                {{ phone_number }}
               </p>
             </div>
           </div>
@@ -214,7 +211,7 @@ CONTACT US
             </div>
             <div class="detail-box">
               <p>
-                demo@gmail.com
+                {{ phone_number }}
               </p>
             </div>
           </div>

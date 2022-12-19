@@ -23,29 +23,30 @@ ABOUT US
       <div class="layout_padding-top layout_padding2-bottom">
         <div class="row">
           <div class="col-md-7">
-            <form action="">
+            <form method="post">
+            {% csrf_token %}
+            <label>
+              <input name="form_type" value="contact_form" hidden>
+            </label>
               <div class="contact_form-container">
                 <div>
                   <div>
-                    <input type="text" placeholder="Name">
+                    {{ form.name }}
                   </div>
                   <div>
-                    <input type="email" placeholder="Email">
+                    {{ form.email }}
                   </div>
                   <div class="">
-                    <input type="text" placeholder="Message" class="message_input">
+                    {{ form.message }}
                   </div>
                   <div class="mt-5">
-                    <button type="submit">
-                      send
-                    </button>
+                    <button type="submit">send</button>
                   </div>
                 </div>
-
               </div>
-
             </form>
           </div>
+
           <div class="col-md-5">
             <div class="map-box">
               <div id="map">
