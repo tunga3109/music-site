@@ -25,7 +25,7 @@
 <div class="carousel-inner">
 <div class="carousel-item active">
   {% if post.image %}
-        <img src="{{ post.image.url }}" alt="">
+        <img src="{{ post.image.url }}" alt="" width="200" height="600">
     {% else %}
         <img src="{% static 'images/slider-img.jpg' %}" alt="">
     {% endif %}

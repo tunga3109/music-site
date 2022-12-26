@@ -106,7 +106,7 @@ class Contact(models.Model):
         db_table = 'blob_contacts'
         verbose_name = 'контакт'
         verbose_name_plural = 'контакты'
-        ordering = ['date_created']
+        ordering = ['-date_created']
 
 
 

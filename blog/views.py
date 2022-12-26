@@ -22,7 +22,7 @@ class MainListView(BaseMixin, ListView):
     model = Post
 
     def get_queryset(self):
-        return Post.objects.all()
+        return Post.objects.all()[:3] # последние 3 записи
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data()
